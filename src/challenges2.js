@@ -48,8 +48,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let findNumbers = /\d+/g; //Expressão regular que faz encontrar um ou mais digitos/numeros de forma global
+  let result = string.match(findNumbers); //Usa a expressão regular para encontrar os numeros do parametro
+  let drinkWater = 0;
+  let answer = "";
+
+  for(let index = 0; index < result.length; index += 1){
+    drinkWater += Number(result[index]);
+  }
+  if(drinkWater === 1){
+    String(drinkWater);
+    answer = drinkWater + " copo de água";
+  }else if(drinkWater > 1){
+    answer = drinkWater + " copos de água";
+  }
+  return answer;
 }
 
 module.exports = {
