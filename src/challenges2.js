@@ -50,7 +50,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let findNumbers = /\d+/g; //Expressão regular que faz encontrar um ou mais digitos/numeros de forma global
-  let result = string.match(findNumbers); //Usa a expressão regular para encontrar os numeros do parametro
+  let result = string.match(findNumbers); //Usa o .match para pesquisar os numeros com a expressao global(findNumbers) dentro do parametro passado
   let drinkWater = 0;
   let answer = "";
 
